@@ -151,7 +151,7 @@
 
 // Name displayed in the LCD "Ready" message and Info menu
 //#define CUSTOM_MACHINE_NAME "ANYCUBIC Kossel"
-#define CUSTOM_MACHINE_NAME "Kossel VSC2"
+#define CUSTOM_MACHINE_NAME "Kossel VSC3"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -698,7 +698,7 @@
   #endif
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 273.87             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 400             // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
@@ -1097,7 +1097,7 @@
 #endif
 
 // Certain types of probes need to stay away from edges
-#define MIN_PROBE_EDGE 15
+#define MIN_PROBE_EDGE 10
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 4000
