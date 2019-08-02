@@ -690,7 +690,7 @@
     #define DELTA_CARRIAGE_OFFSET 20.6    // (mm)
     // Horizontal distance bridged by diagonal push rods when effector is centered.
     //#define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-(DELTA_EFFECTOR_OFFSET)-(DELTA_CARRIAGE_OFFSET))        // (mm) Get this value from G33 auto calibrate
-    #define DELTA_RADIUS 133.08
+    #define DELTA_RADIUS 133.05
   #else
     // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
     #define DELTA_PRINTABLE_RADIUS 90.0   // (mm)
@@ -701,16 +701,15 @@
   #endif
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 273.98             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 283.09             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { 0.0, -0.05, -0.01 } // Get these values from G33 auto calibrate
- 
-
+  #define DELTA_ENDSTOP_ADJ { -0.26, 0.00, -0.61 } // Get these values from G33 auto calibrate
+  
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { -0.20, 0.01, 0.19 } // Get these values from G33 auto calibrate
-  //M665 L267.00 R133.08 H273.98 S80.00 B106.00 X-0.20 Y0.01 Z0.19
+  #define DELTA_TOWER_ANGLE_TRIM { -0.30, 0.05, 0.25 } // Get these values from G33 auto calibrate
+  //M665 L267.00 R133.05 H283.09 S80.00 B106.00 X-0.30 Y0.05 Z0.25
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
   //#define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -1093,7 +1092,7 @@
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0     // Y offset: -front +behind [the nozzle]
 
 #if ANYCUBIC_PROBE_VERSION == 2
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -15.8  // Z offset: -below +above  [the nozzle]
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER -15.68  // Z offset: -below +above  [the nozzle]
 #elif ANYCUBIC_PROBE_VERSION == 1
   #define Z_PROBE_OFFSET_FROM_EXTRUDER -19.0  // Z offset: -below +above  [the nozzle]
 #else
