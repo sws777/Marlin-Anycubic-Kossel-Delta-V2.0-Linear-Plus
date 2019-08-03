@@ -153,7 +153,7 @@
 
 // Name displayed in the LCD "Ready" message and Info menu
 //#define CUSTOM_MACHINE_NAME "ANYCUBIC Kossel"
-#define CUSTOM_MACHINE_NAME "Kossel VSC5"
+#define CUSTOM_MACHINE_NAME "Kossel VSC6"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -1490,6 +1490,7 @@
  * Commands to execute at the end of G29 probing.
  * Useful to retract or move the Z probe out of the way.
  */
+#define Z_PROBE_END_SCRIPT "G1 Z10 F1000\nG1 X0 Y0 Z200 F2000"
 //#define Z_PROBE_END_SCRIPT "G1 Z10 F12000\nG1 X15 Y330\nG1 Z0.5\nG1 Z10"
 //#define Z_PROBE_END_SCRIPT "G1 X0 Y0 F6000\nG1 Z240\nG28"
 //#define Z_PROBE_END_SCRIPT "G28"
