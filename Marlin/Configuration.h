@@ -1389,6 +1389,19 @@
 
   // Set the number of grid points per dimension.
   // Works best with 5 or more points in each dimension.
+
+  // Firmware built ok but on pronterface connection got this error:
+  // [ERROR] Error:EEPROM datasize error.
+  // https://github.com/MarlinFirmware/Marlin/issues/11699
+  // Changed GRID_MAX_POINTS_X to 11 from 9 (it has to be odd, btw)
+  // 
+  // It means you need to do M502, M500 to update the EEPROM, because you've changed the required storage size of the EEPROM by modifying GRID_MAX_POINTS_X.
+  // That fixed it. After that an M500 showed the settings.
+  
+
+
+
+
   #define GRID_MAX_POINTS_X 11
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
